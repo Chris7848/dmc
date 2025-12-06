@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Leaf, Zap, TrendingUp, Shield, Users, BarChart3, Wallet, Globe, Award, Clock, DollarSign, Factory, Wind, ArrowRight, CheckCircle, Lock, Activity, Target, Link as LinkIcon, Trash2, Battery, Home } from 'lucide-react';
 import Logo from './assets/eco2.jpg'
+import { Leaf, Zap, TrendingUp, Shield, Users, BarChart3, Wallet, Globe, Award, Clock, DollarSign, Factory, Wind, ArrowRight, CheckCircle, Lock, Activity, Target, Link as LinkIcon, Trash2, Battery, Home } from 'lucide-react';
 
 export default function WtEGreenBondsPlatform() {
   const [activeTab, setActiveTab] = useState('overview');
   const [walletConnected, setWalletConnected] = useState(false);
-  const [investAmount, setInvestAmount] = useState('50000');
+  const [investAmount, setInvestAmount] = useState('100');
 
   // Real-time metrics (in production, these would come from IoT oracles)
   const liveMetrics = {
@@ -18,24 +18,24 @@ export default function WtEGreenBondsPlatform() {
   const bondDetails = {
     maturity: "5 Years",
     couponRate: "8%",
-    minInvestment: "₦5,000",
-    totalRaised: "₦1.2B",
-    targetRaise: "₦2.5B",
+    minInvestment: "$10",
+    totalRaised: "$2.4M",
+    targetRaise: "$5M",
     investorsCount: "1,247",
     nextPayout: "15 Days"
   };
 
   const projectPhases = [
-    { phase: "Phase 1: Lagos WtE Facility", status: "Active", progress: 75, location: "Lagos, Nigeria", capacity: "500 tons/day" },
-    { phase: "Phase 2: Nairobi Expansion", status: "Funded", progress: 100, location: "Nairobi, Kenya", capacity: "350 tons/day" },
-    { phase: "Phase 3: Accra Plant", status: "Funding", progress: 45, location: "Accra, Ghana", capacity: "400 tons/day" }
+    { phase: "Phase 1: Lagos WtE Facility", status: "Coming soon", progress: 75, location: "Lagos, Nigeria", capacity: "500 tons/day" },
+    { phase: "Phase 2: Nairobi Expansion", status: "Coming soon", progress: 100, location: "Nairobi, Kenya", capacity: "350 tons/day" },
+    { phase: "Phase 3: Accra Plant", status: "Coming soon", progress: 45, location: "Accra, Ghana", capacity: "400 tons/day" }
   ];
 
   const impactBreakdown = [
-    { amount: "₦5,000", waste: "0.5 tons", homes: "2", co2: "0.3 tons" },
-    { amount: "₦25,000", waste: "2.5 tons", homes: "10", co2: "1.5 tons" },
-    { amount: "₦50,000", waste: "5 tons", homes: "20", co2: "3 tons" },
-    { amount: "₦250,000", waste: "25 tons", homes: "100", co2: "15 tons" }
+    { amount: "$10", waste: "0.5 tons", homes: "2", co2: "0.3 tons" },
+    { amount: "$50", waste: "2.5 tons", homes: "10", co2: "1.5 tons" },
+    { amount: "$100", waste: "5 tons", homes: "20", co2: "3 tons" },
+    { amount: "$500", waste: "25 tons", homes: "100", co2: "15 tons" }
   ];
 
   const partners = [
@@ -48,11 +48,11 @@ export default function WtEGreenBondsPlatform() {
   const faqs = [
     {
       q: "How do I earn returns?",
-      a: "You receive 8% annual coupon payments in USDC, paid quarterly to your wallet. At maturity (5 years), you get your principal back plus any accumulated carbon credits."
+      a: "You earn yields from the companies we invest in their infrastructure to your wallet, getting your principal back plus any accumulated carbon credits anytime you want."
     },
     {
       q: "What happens to my investment?",
-      a: "Your funds finance WtE infrastructure. As waste is processed and energy sold, you earn returns. All transactions are transparent on Solana blockchain."
+      a: "Your funds finance WtE infrastructure. As waste is processed and energy sold, you earn returns. All transactions are transparent on Arbitrum blockchain."
     },
     {
       q: "Can I sell my bonds before maturity?",
@@ -70,22 +70,23 @@ export default function WtEGreenBondsPlatform() {
       <nav className="bg-white/90 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-3">
-             <div className="p-2">
+          <div className="flex items-center gap-2 sm:gap-3">
   <img
     src={Logo}
     alt="Logo"
-    className="w-12 h-auto sm:w-16 md:w-20 lg:w-24"
+    className="w-10 h-auto sm:w-12 md:w-16 lg:w-20"
   />
+
+  <div className="flex flex-col">
+    <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+      ECOBOND
+    </div>
+    <div className="text-[10px] sm:text-xs text-gray-500 leading-tight">
+      Waste-to-Energy Bonds
+    </div>
+  </div>
 </div>
 
-              <div>
-                <div className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                  ECOBOND
-                </div>
-                <div className="text-xs text-gray-500">Waste-to-Energy Bonds</div>
-              </div>
-            </div>
             
             <div className="hidden md:flex space-x-8">
               {['Dashboard', 'Invest', 'Impact', 'About'].map((item) => (
@@ -125,20 +126,20 @@ export default function WtEGreenBondsPlatform() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="inline-block bg-emerald-500/20 border border-emerald-400/30 rounded-full px-4 py-2 text-sm font-semibold">
-                🌍 Powered by Solana Blockchain
+                🌍 Powered by Arbitrum
               </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 Turn Africa's Waste into Power
               </h1>
               <p className="text-xl text-gray-300">
                 Invest in tokenized green bonds that finance waste-to-energy infrastructure. 
-                Earn <span className="text-emerald-400 font-bold">8% annual returns</span> while 
+                Earn <span className="text-emerald-400 font-bold">returns</span> while 
                 powering communities and cleaning up waste.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a href="#invest" className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl text-center">
-                  Start from ₦5,000
+                  Start from $10
                 </a>
                 <a href="#impact" className="border-2 border-white hover:bg-white hover:text-emerald-900 px-8 py-4 rounded-full font-bold text-lg transition-all text-center">
                   See Your Impact
@@ -146,10 +147,6 @@ export default function WtEGreenBondsPlatform() {
               </div>
 
               <div className="flex items-center space-x-6 pt-6">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-emerald-400" />
-                  <span className="text-sm">SEC Compliant</span>
-                </div>
                 <div className="flex items-center space-x-2">
                   <Shield className="w-5 h-5 text-emerald-400" />
                   <span className="text-sm">Insured Projects</span>
@@ -171,24 +168,33 @@ export default function WtEGreenBondsPlatform() {
                   
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-white/5 rounded-xl p-4">
-                      <Trash2 className="w-8 h-8 text-emerald-400 mb-2" />
-                      <div className="text-2xl font-bold">{liveMetrics.wasteProcessed}</div>
-                      <div className="text-sm text-gray-400">Tons Processed</div>
+                      <Trash2 className="w-8 h-8 text-emerald-400 mb-3" />
+                      {/* <div className="text-2xl font-bold">{liveMetrics.wasteProcessed}</div> */}
+                      <span className="text-emerald-700 mb-3 bg-emerald-100 px-3 py-1 rounded-full text-sm   font-semibold">
+                       Coming Soon
+                      </span>
+                      <div className="text-sm text-gray-400 mt-2">Tons Processed</div>
                     </div>
                     <div className="bg-white/5 rounded-xl p-4">
                       <Zap className="w-8 h-8 text-yellow-400 mb-2" />
-                      <div className="text-2xl font-bold">{liveMetrics.energyGenerated} MW</div>
-                      <div className="text-sm text-gray-400">Clean Energy</div>
+                      <span className="text-emerald-700 mb-3 bg-emerald-100 px-3 py-1 rounded-full text-sm   font-semibold">
+                       Coming Soon
+                      </span>
+                      <div className="text-sm text-gray-400 mt-2">Clean Energy</div>
                     </div>
                     <div className="bg-white/5 rounded-xl p-4">
                       <Wind className="w-8 h-8 text-blue-400 mb-2" />
-                      <div className="text-2xl font-bold">{liveMetrics.co2Reduced}</div>
-                      <div className="text-sm text-gray-400">Tons CO₂ Saved</div>
+                      <span className="text-emerald-700 mb-3 bg-emerald-100 px-3 py-1 rounded-full text-sm   font-semibold">
+                       Coming Soon
+                      </span>
+                      <div className="text-sm text-gray-400 mt-2">Tons CO₂ Saved</div>
                     </div>
                     <div className="bg-white/5 rounded-xl p-4">
                       <Home className="w-8 h-8 text-purple-400 mb-2" />
-                      <div className="text-2xl font-bold">{liveMetrics.homesPowered}</div>
-                      <div className="text-sm text-gray-400">Homes Powered</div>
+                     <span className="text-emerald-700 mb-3 bg-emerald-100 px-3 py-1 rounded-full text-sm   font-semibold">
+                       Coming Soon
+                      </span>
+                      <div className="text-sm text-gray-400 mt-2">Homes Powered</div>
                     </div>
                   </div>
                 </div>
@@ -210,8 +216,8 @@ export default function WtEGreenBondsPlatform() {
             <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <Target className="w-10 h-10 text-emerald-600" />
-                <span className="text-sm font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-                  Active
+                <span className="text-sm font-semibold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
+                  Coming soon
                 </span>
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-2">{bondDetails.totalRaised}</div>
@@ -224,7 +230,9 @@ export default function WtEGreenBondsPlatform() {
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <Users className="w-10 h-10 text-blue-600" />
-                <TrendingUp className="w-6 h-6 text-blue-600" />
+                <span className="text-sm font-semibold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
+                  Coming soon
+                </span>
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-2">{bondDetails.investorsCount}</div>
               <div className="text-gray-600 mb-2">Active Investors</div>
@@ -234,58 +242,93 @@ export default function WtEGreenBondsPlatform() {
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <Clock className="w-10 h-10 text-purple-600" />
-                <DollarSign className="w-6 h-6 text-purple-600" />
+                <span className="text-sm font-semibold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
+                  Coming soon
+                </span>
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-2">{bondDetails.couponRate}</div>
               <div className="text-gray-600 mb-2">Annual Returns</div>
-              <div className="text-sm text-purple-600 font-semibold">Next payout in {bondDetails.nextPayout}</div>
+              
             </div>
           </div>
 
           {/* Project Phases */}
-          <div className="bg-white border-2 border-gray-200 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Active Projects</h3>
-            <div className="space-y-6">
-              {projectPhases.map((project, idx) => (
-                <div key={idx} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <h4 className="text-lg font-bold text-gray-900">{project.phase}</h4>
-                        <span className={`text-xs px-3 py-1 rounded-full font-semibold ${
-                          project.status === 'Active' ? 'bg-green-100 text-green-700' :
-                          project.status === 'Funded' ? 'bg-blue-100 text-blue-700' :
-                          'bg-orange-100 text-orange-700'
-                        }`}>
-                          {project.status}
-                        </span>
-                      </div>
-                      <div className="flex items-center space-x-4 text-sm text-gray-600">
-                        <span className="flex items-center space-x-1">
-                          <Globe className="w-4 h-4" />
-                          <span>{project.location}</span>
-                        </span>
-                        <span className="flex items-center space-x-1">
-                          <Factory className="w-4 h-4" />
-                          <span>{project.capacity}</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div className="mt-4 md:mt-0 md:ml-8 text-right">
-                      <div className="text-2xl font-bold text-emerald-600">{project.progress}%</div>
-                      <div className="text-sm text-gray-600">Complete</div>
-                    </div>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div 
-                      className="bg-gradient-to-r from-emerald-500 to-teal-600 h-2 rounded-full transition-all duration-500"
-                      style={{width: `${project.progress}%`}}
-                    ></div>
-                  </div>
-                </div>
-              ))}
+          <div className="bg-white border-2 border-gray-200 rounded-2xl p-4 sm:p-8">
+  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+    Active Projects
+  </h3>
+
+  <div className="space-y-5 sm:space-y-6">
+    {projectPhases.map((project, idx) => (
+      <div 
+        key={idx} 
+        className="border-b border-gray-200 pb-5 sm:pb-6 last:border-b-0"
+      >
+
+        {/* TOP SECTION */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-0 mb-4">
+
+          {/* LEFT SIDE */}
+          <div className="flex-1">
+
+            {/* Title + Status */}
+            <div className="flex items-center space-x-2 sm:space-x-3 mb-2">
+              <h4 className="text-base sm:text-lg font-bold text-gray-900">
+                {project.phase}
+              </h4>
+
+              <span
+                className={`px-2 py-0.5 rounded-full font-semibold text-[10px] sm:text-xs
+                  ${
+                    project.status === 'Active'
+                      ? 'bg-green-100 text-green-700'
+                      : project.status === 'Funded'
+                      ? 'bg-blue-100 text-blue-700'
+                      : 'bg-orange-100 text-orange-700'
+                  }
+                `}
+              >
+                {project.status}
+              </span>
+            </div>
+
+            {/* Location + Capacity */}
+            <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-gray-600">
+              <span className="flex items-center space-x-1">
+                <Globe className="w-4 h-4" />
+                <span>{project.location}</span>
+              </span>
+
+              <span className="flex items-center space-x-1">
+                <Factory className="w-4 h-4" />
+                <span>{project.capacity}</span>
+              </span>
             </div>
           </div>
+
+          {/* RIGHT SIDE */}
+          <div className="mt-2 md:mt-0 md:ml-8 text-left md:text-right">
+            <div className="text-xl sm:text-2xl font-bold text-emerald-600">
+              {project.progress}%
+            </div>
+            <div className="text-xs sm:text-sm text-gray-600">
+              Complete
+            </div>
+          </div>
+        </div>
+
+        {/* PROGRESS BAR */}
+        <div className="w-full bg-gray-200 rounded-full h-2">
+          <div
+            className="bg-gradient-to-r from-emerald-500 to-teal-600 h-2 rounded-full transition-all duration-500"
+            style={{ width: `${project.progress}%` }}
+          ></div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
         </div>
       </section>
 
@@ -294,36 +337,45 @@ export default function WtEGreenBondsPlatform() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Invest in Green Bonds</h2>
-            <p className="text-xl text-gray-600">Tokenized bonds on Solana - Start from just ₦5,000</p>
+            <p className="text-xl text-gray-600">Tokenized bonds on Solana - Start from just $10</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Investment Calculator */}
             <div className="bg-white border-2 border-gray-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Calculate Your Returns</h3>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+  <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+    Calculate Your Returns
+  </h3>
+
+  <span className="text-sm font-semibold text-orange-600 bg-orange-100 px-3 py-1 rounded-full h-8 flex items-center justify-center">
+    Coming soon
+  </span>
+</div>
+
               
               <div className="mb-6">
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Investment Amount
                 </label>
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-600">₦</span>
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-600">$</span>
                   <input
                     type="text"
                     value={investAmount}
                     onChange={(e) => setInvestAmount(e.target.value.replace(/[^0-9]/g, ''))}
                     className="w-full pl-10 pr-4 py-4 text-2xl font-bold border-2 border-gray-300 rounded-xl focus:border-emerald-500 focus:outline-none"
-                    placeholder="50000"
+                    placeholder="100"
                   />
                 </div>
                 <div className="flex gap-2 mt-3">
-                  {['5000', '25000', '50000', '100000'].map(amount => (
+                  {['10', '50', '100', '500'].map(amount => (
                     <button
                       key={amount}
                       onClick={() => setInvestAmount(amount)}
                       className="flex-1 py-2 text-sm font-semibold border-2 border-gray-300 rounded-lg hover:border-emerald-500 hover:text-emerald-600 transition-colors"
                     >
-                      ₦{parseInt(amount).toLocaleString()}
+                      ${parseInt(amount).toLocaleString()}
                     </button>
                   ))}
                 </div>
@@ -334,13 +386,13 @@ export default function WtEGreenBondsPlatform() {
                   <div>
                     <div className="text-sm text-gray-600 mb-1">Annual Return</div>
                     <div className="text-2xl font-bold text-emerald-600">
-                      ₦{(parseInt(investAmount || 0) * 0.08).toLocaleString()}
+                      ${(parseInt(investAmount || 0) * 0.08).toLocaleString()}
                     </div>
                   </div>
                   <div>
                     <div className="text-sm text-gray-600 mb-1">5-Year Total</div>
                     <div className="text-2xl font-bold text-emerald-600">
-                      ₦{(parseInt(investAmount || 0) * 1.469).toLocaleString()}
+                      ${(parseInt(investAmount || 0) * 1.469).toLocaleString()}
                     </div>
                   </div>
                 </div>
@@ -359,7 +411,7 @@ export default function WtEGreenBondsPlatform() {
 
               {!walletConnected && (
                 <p className="text-sm text-center text-gray-600 mt-3">
-                  Connect your Solana wallet to start investing
+                  Connect your Arbitrum wallet to start investing
                 </p>
               )}
             </div>
@@ -398,8 +450,7 @@ export default function WtEGreenBondsPlatform() {
                   <div>
                     <h4 className="font-bold text-gray-900 mb-2">Protection & Insurance</h4>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      All projects are backed by government PPAs (Power Purchase Agreements) and municipal waste contracts. 
-                      Insured by African Development Bank with 90% principal protection.
+                      All projects would be backed by relevant entities based on your religion.
                     </p>
                   </div>
                 </div>
@@ -448,13 +499,18 @@ export default function WtEGreenBondsPlatform() {
               <div>
                 <h3 className="text-3xl font-bold mb-4">How It Works</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  Watch how your ₦50,000 investment transforms communities: removes 5 tons of waste, 
+                  Watch how your $100 investment transforms communities: removes 5 tons of waste, 
                   powers 20 homes for a year, and prevents 3 tons of CO₂ emissions.
                 </p>
-                <button className="bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-full font-semibold transition-all flex items-center space-x-2">
+                <div className='flex gap-10 items-center'>
+                  <button className="bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-full font-semibold transition-all flex items-center space-x-2">
                   <span>Watch Video</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
+                <span className="text-orange-700 flex space-x-2 bg-orange-200 px-6 py-3 rounded-full text-sm   font-semibold items-center justify-center">
+                       Coming Soon
+                      </span>
+                </div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl aspect-video flex items-center justify-center border-2 border-white/20">
                 <div className="text-center">
@@ -474,7 +530,7 @@ export default function WtEGreenBondsPlatform() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Partners & Verification</h2>
-            <p className="text-xl text-gray-600">Trusted by governments, banks, and blockchain leaders</p>
+            <p className="text-xl text-gray-600">Trusted by governments & Brands like <a href="chanjadatti.com"> CHANJA DATTI</a></p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -497,8 +553,8 @@ export default function WtEGreenBondsPlatform() {
               <div className="flex items-start space-x-3">
                 <LinkIcon className="w-6 h-6 text-purple-600 mt-1" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Solana Blockchain</h4>
-                  <p className="text-sm text-gray-600">Fast, low-cost transactions with carbon credit tracking</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Arbitrum Blockchain</h4>
+                  <p className="text-sm text-gray-600">Fast, low cost transactions</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -511,8 +567,8 @@ export default function WtEGreenBondsPlatform() {
               <div className="flex items-start space-x-3">
                 <DollarSign className="w-6 h-6 text-emerald-600 mt-1" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-2">USDC Payouts</h4>
-                  <p className="text-sm text-gray-600">Automated quarterly payments via Solana Pay</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Yields</h4>
+                  <p className="text-sm text-gray-600">Get access to good interest</p>
                 </div>
               </div>
             </div>
@@ -624,7 +680,7 @@ export default function WtEGreenBondsPlatform() {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <span className="text-blue-400 mr-2">•</span>
-                  Earn 8% annual returns on investment
+                  Earn returns on investment
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-400 mr-2">•</span>
@@ -739,15 +795,15 @@ export default function WtEGreenBondsPlatform() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-5xl font-bold mb-6">Start Investing Today</h2>
           <p className="text-2xl mb-4 text-emerald-100">
-            Join 1,247+ investors earning 8% returns while powering Africa's future
+            Join investors earning returns while powering Africa's future
           </p>
           <p className="text-xl mb-10 text-emerald-200">
-            ✓ From ₦5,000  ✓ Quarterly Payouts  ✓ Blockchain Secured  ✓ Tradeable Anytime
+            ✓ From $10  ✓ Good returns   ✓ Blockchain Secured  ✓ Tradeable Anytime
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href="#invest" className="bg-white text-emerald-600 hover:bg-gray-100 px-10 py-5 rounded-full font-bold text-xl transition-all transform hover:scale-105 shadow-2xl">
-              Invest Now from ₦5,000
+              Invest Now from $10
             </a>
             <button className="border-3 border-white hover:bg-white/10 px-10 py-5 rounded-full font-bold text-xl transition-all">
               Schedule Call with Team
@@ -755,14 +811,8 @@ export default function WtEGreenBondsPlatform() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>SEC Registered</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>Bank Insured</span>
-            </div>
+            
+            
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5" />
               <span>Carbon Verified</span>
