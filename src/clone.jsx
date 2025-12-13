@@ -42,7 +42,7 @@ export default function WtEGreenBondsPlatform() {
     { name: "Lagos Municipal Authority", type: "Government", icon: <Users className="w-6 h-6" /> },
     { name: "African Development Bank", type: "Financial", icon: <DollarSign className="w-6 h-6" /> },
     { name: "UN Clean Development", type: "Verification", icon: <CheckCircle className="w-6 h-6" /> },
-    { name: "Solana Foundation", type: "Technology", icon: <Zap className="w-6 h-6" /> }
+    { name: "Arbitrum Foundation", type: "Technology", icon: <Zap className="w-6 h-6" /> }
   ];
 
   const faqs = [
@@ -65,7 +65,7 @@ export default function WtEGreenBondsPlatform() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-emerald-50">
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -78,7 +78,7 @@ export default function WtEGreenBondsPlatform() {
   />
 
   <div className="flex flex-col">
-    <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+    <div className="text-lg sm:text-xl md:text-2xl font-bold bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
       ECOBOND
     </div>
     <div className="text-[10px] sm:text-xs text-gray-500 leading-tight">
@@ -105,7 +105,7 @@ export default function WtEGreenBondsPlatform() {
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all ${
                 walletConnected
                   ? 'bg-emerald-100 text-emerald-700 border-2 border-emerald-300'
-                  : 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:shadow-lg'
+                  : 'bg-linear-to-r from-emerald-500 to-teal-600 text-white hover:shadow-lg'
               }`}
             >
               <Wallet className="w-5 h-5" />
@@ -116,7 +116,7 @@ export default function WtEGreenBondsPlatform() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 text-white py-20">
+      <section className="relative overflow-hidden bg-linear-to-br from-slate-900 via-emerald-900 to-teal-900 text-white py-20">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-72 h-72 bg-emerald-500 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-teal-500 rounded-full blur-3xl animate-pulse"></div>
@@ -213,7 +213,7 @@ export default function WtEGreenBondsPlatform() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-6">
+            <div className="bg-linear-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <Target className="w-10 h-10 text-emerald-600" />
                 <span className="text-sm font-semibold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
@@ -223,11 +223,11 @@ export default function WtEGreenBondsPlatform() {
               <div className="text-3xl font-bold text-gray-900 mb-2">{bondDetails.totalRaised}</div>
               <div className="text-gray-600 mb-4">Raised of {bondDetails.targetRaise} Target</div>
               <div className="w-full bg-gray-200 rounded-full h-3">
-                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 h-3 rounded-full" style={{width: '48%'}}></div>
+                <div className="bg-linear-to-r from-emerald-500 to-teal-600 h-3 rounded-full" style={{width: '48%'}}></div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-6">
+            <div className="bg-linear-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <Users className="w-10 h-10 text-blue-600" />
                 <span className="text-sm font-semibold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
@@ -239,7 +239,7 @@ export default function WtEGreenBondsPlatform() {
               <div className="text-sm text-blue-600 font-semibold">+47 this week</div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-2xl p-6">
+            <div className="bg-linear-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <Clock className="w-10 h-10 text-purple-600" />
                 <span className="text-sm font-semibold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
@@ -272,25 +272,33 @@ export default function WtEGreenBondsPlatform() {
           <div className="flex-1">
 
             {/* Title + Status */}
-            <div className="flex items-center space-x-2 sm:space-x-3 mb-2">
-              <h4 className="text-base sm:text-lg font-bold text-gray-900">
-                {project.phase}
-              </h4>
+           <div className="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2 w-full sm:w-[300px] whitespace-nowrap">
+  <h4 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 leading-tight truncate">
+    {project.phase}
+  </h4>
 
-              <span
-                className={`px-2 py-0.5 rounded-full font-semibold text-[10px] sm:text-xs
-                  ${
-                    project.status === 'Active'
-                      ? 'bg-green-100 text-green-700'
-                      : project.status === 'Funded'
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'bg-orange-100 text-orange-700'
-                  }
-                `}
-              >
-                {project.status}
-              </span>
-            </div>
+  <span
+    className={`px-2 py-[3px] rounded-full font-semibold shrink-0
+      text-[10px] sm:text-xs lg:text-sm
+      ${
+        project.status === 'Active'
+          ? 'bg-green-100 text-green-700'
+          : project.status === 'Funded'
+          ? 'bg-blue-100 text-blue-700'
+          : 'bg-orange-100 text-orange-700'
+      }
+    `}
+  >
+    {/* Mobile short text */}
+    <span className="sm:hidden">Coming soon</span>
+
+    {/* Tablet & Laptop full text */}
+    <span className="hidden sm:inline">{project.status}</span>
+  </span>
+</div>
+
+
+
 
             {/* Location + Capacity */}
             <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-gray-600">
@@ -320,7 +328,7 @@ export default function WtEGreenBondsPlatform() {
         {/* PROGRESS BAR */}
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
-            className="bg-gradient-to-r from-emerald-500 to-teal-600 h-2 rounded-full transition-all duration-500"
+            className="bg-linear-to-r from-emerald-500 to-teal-600 h-2 rounded-full transition-all duration-500"
             style={{ width: `${project.progress}%` }}
           ></div>
         </div>
@@ -333,11 +341,11 @@ export default function WtEGreenBondsPlatform() {
       </section>
 
       {/* Investment Section */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 to-emerald-50" id="invest">
+      <section className="py-16 bg-linear-to-br from-slate-50 to-emerald-50" id="invest">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Invest in Green Bonds</h2>
-            <p className="text-xl text-gray-600">Tokenized bonds on Solana - Start from just $10</p>
+            <p className="text-xl text-gray-600">Tokenized bonds on Arbitrum - Start from just $10</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -381,7 +389,7 @@ export default function WtEGreenBondsPlatform() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-xl p-6 mb-6">
+              <div className="bg-linear-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-xl p-6 mb-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <div className="text-sm text-gray-600 mb-1">Annual Return</div>
@@ -402,7 +410,7 @@ export default function WtEGreenBondsPlatform() {
                 disabled={!walletConnected}
                 className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${
                   walletConnected
-                    ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:shadow-xl transform hover:scale-105'
+                    ? 'bg-linear-to-r from-emerald-500 to-teal-600 text-white hover:shadow-xl transform hover:scale-105'
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                 }`}
               >
@@ -444,9 +452,9 @@ export default function WtEGreenBondsPlatform() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-6">
+              <div className="bg-linear-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-6">
                 <div className="flex items-start space-x-3">
-                  <Shield className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                  <Shield className="w-6 h-6 text-blue-600 mt-1 shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900 mb-2">Protection & Insurance</h4>
                     <p className="text-sm text-gray-600 leading-relaxed">
@@ -470,7 +478,7 @@ export default function WtEGreenBondsPlatform() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {impactBreakdown.map((impact, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-6 hover:shadow-xl transition-all transform hover:-translate-y-2">
+              <div key={idx} className="bg-linear-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-6 hover:shadow-xl transition-all transform hover:-translate-y-2">
                 <div className="text-center mb-4">
                   <div className="text-3xl font-bold text-emerald-600 mb-2">{impact.amount}</div>
                   <div className="text-sm text-gray-600">Investment</div>
@@ -494,7 +502,7 @@ export default function WtEGreenBondsPlatform() {
           </div>
 
           {/* Video Explainer Placeholder */}
-          <div className="mt-16 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
+          <div className="mt-16 bg-linear-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-3xl font-bold mb-4">How It Works</h3>
@@ -515,7 +523,7 @@ export default function WtEGreenBondsPlatform() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl aspect-video flex items-center justify-center border-2 border-white/20">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-white/30 transition-all">
-                    <div className="w-0 h-0 border-l-[20px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
+                    <div className="w-0 h-0 border-l-20 border-l-white border-t-12 border-t-transparent border-b-12 border-b-transparent ml-1"></div>
                   </div>
                   <p className="text-gray-300">3:45 Impact Explainer</p>
                 </div>
@@ -526,7 +534,7 @@ export default function WtEGreenBondsPlatform() {
       </section>
 
       {/* Partners & Governance */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 to-emerald-50">
+      <section className="py-16 bg-linear-to-br from-slate-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Partners & Verification</h2>
@@ -586,9 +594,9 @@ export default function WtEGreenBondsPlatform() {
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-slate-50 to-emerald-50 border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
+              <div key={idx} className="bg-linear-to-br from-slate-50 to-emerald-50 border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
                 <h4 className="font-bold text-gray-900 mb-3 text-lg flex items-start">
-                  <span className="bg-emerald-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0 mt-0.5">
+                  <span className="bg-emerald-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 shrink-0 mt-0.5">
                     ?
                   </span>
                   {faq.q}
@@ -598,7 +606,7 @@ export default function WtEGreenBondsPlatform() {
             ))}
           </div>
 
-          <div className="mt-12 bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-8 text-center">
+          <div className="mt-12 bg-linear-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Still Have Questions?</h3>
             <p className="text-gray-600 mb-6">Our team is here to help you understand your investment</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -614,7 +622,7 @@ export default function WtEGreenBondsPlatform() {
       </section>
 
       {/* Education Section */}
-      <section className="py-16 bg-gradient-to-br from-slate-900 to-emerald-900 text-white">
+      <section className="py-16 bg-linear-to-br from-slate-900 to-emerald-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Why Waste-to-Energy Matters in Africa</h2>
@@ -715,7 +723,7 @@ export default function WtEGreenBondsPlatform() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-emerald-200 rounded-2xl p-8">
+            <div className="bg-linear-to-br from-green-50 to-emerald-50 border-2 border-emerald-200 rounded-2xl p-8">
               <div className="flex items-center space-x-3 mb-4">
                 <Globe className="w-8 h-8 text-emerald-600" />
                 <h3 className="text-2xl font-bold text-gray-900">Sweden's WtE Success</h3>
@@ -730,7 +738,7 @@ export default function WtEGreenBondsPlatform() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-8">
+            <div className="bg-linear-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-8">
               <div className="flex items-center space-x-3 mb-4">
                 <Globe className="w-8 h-8 text-blue-600" />
                 <h3 className="text-2xl font-bold text-gray-900">Singapore's Model</h3>
@@ -749,7 +757,7 @@ export default function WtEGreenBondsPlatform() {
       </section>
 
       {/* Investor Portal Preview */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 to-emerald-50">
+      <section className="py-16 bg-linear-to-br from-slate-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Your Investor Portal</h2>
@@ -758,17 +766,17 @@ export default function WtEGreenBondsPlatform() {
 
           <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 shadow-2xl">
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6">
+              <div className="bg-linear-to-br from-emerald-50 to-teal-50 rounded-xl p-6">
                 <BarChart3 className="w-8 h-8 text-emerald-600 mb-3" />
                 <h4 className="font-bold text-gray-900 mb-2">Portfolio Dashboard</h4>
                 <p className="text-sm text-gray-600">Live view of all your holdings and performance</p>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
+              <div className="bg-linear-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
                 <DollarSign className="w-8 h-8 text-blue-600 mb-3" />
                 <h4 className="font-bold text-gray-900 mb-2">Payout History</h4>
                 <p className="text-sm text-gray-600">Track all quarterly payments and returns</p>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6">
+              <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-xl p-6">
                 <Activity className="w-8 h-8 text-purple-600 mb-3" />
                 <h4 className="font-bold text-gray-900 mb-2">Impact Metrics</h4>
                 <p className="text-sm text-gray-600">Your personal environmental contribution</p>
@@ -781,7 +789,7 @@ export default function WtEGreenBondsPlatform() {
               <p className="text-gray-600 mb-6">View detailed analytics, download tax reports, and manage your bonds</p>
               <button
                 onClick={() => setWalletConnected(true)}
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-3 rounded-full font-bold transition-all hover:shadow-xl transform hover:scale-105"
+                className="bg-linear-to-r from-emerald-500 to-teal-600 text-white px-8 py-3 rounded-full font-bold transition-all hover:shadow-xl transform hover:scale-105"
               >
                 Connect Wallet
               </button>
@@ -791,7 +799,7 @@ export default function WtEGreenBondsPlatform() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
+      <section className="py-20 bg-linear-to-br from-emerald-600 to-teal-700 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-5xl font-bold mb-6">Start Investing Today</h2>
           <p className="text-2xl mb-4 text-emerald-100">
@@ -831,13 +839,17 @@ export default function WtEGreenBondsPlatform() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-gradient-to-br from-emerald-500 to-teal-600 p-2 rounded-xl">
-                  <Leaf className="w-6 h-6 text-white" />
+                <div className=" p-2 rounded-xl">
+                  <img
+    src={Logo}
+    alt="Logo"
+    className="w-10 h-auto sm:w-12 md:w-16 lg:w-20"
+  />
                 </div>
-                <span className="text-xl font-bold">GreenPower Africa</span>
+                <span className="text-xl font-bold">ECOBOND</span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Tokenized green bonds financing Africa's waste-to-energy revolution. Powered by Solana blockchain.
+                Tokenized green bonds financing Africa's waste-to-energy revolution. Powered by Arbitrum blockchain.
               </p>
             </div>
 
