@@ -128,21 +128,19 @@ export default function WtEGreenBondsPlatform() {
               <div className="inline-block bg-emerald-500/20 border border-emerald-400/30 rounded-full px-4 py-2 text-sm font-semibold">
                 🌍 Powered by Arbitrum
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                Turn Africa's Waste into Power
+              <h1 className="text-2xl md:text-6xl font-bold ">
+                Performance-based financing for climate infrastructure
               </h1>
               <p className="text-xl text-gray-300">
-                Invest in tokenized green bonds that finance waste-to-energy infrastructure. 
-                Earn <span className="text-emerald-400 font-bold">returns</span> while 
-                powering communities and cleaning up waste.
+                Connect waste-to-energy, recycling, and renewable projects with impact-conscious investors. Real<span className="text-emerald-400 font-bold">returns</span>. Real accountability. Real impact.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a href="#invest" className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl text-center">
-                  Start from $10
+                  Explore as investor
                 </a>
                 <a href="#impact" className="border-2 border-white hover:bg-white hover:text-emerald-900 px-8 py-4 rounded-full font-bold text-lg transition-all text-center">
-                  See Your Impact
+                  Explore as project
                 </a>
               </div>
 
@@ -345,7 +343,7 @@ export default function WtEGreenBondsPlatform() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Invest in Green Bonds</h2>
-            <p className="text-xl text-gray-600">Tokenized bonds on Arbitrum - Start from just $10</p>
+            <p className="text-xl text-gray-600">Tokenized bonds on Arbitrum</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -589,7 +587,7 @@ export default function WtEGreenBondsPlatform() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">Everything you need to know about investing</p>
+            <p className="text-xl text-gray-600">Everything you need to know before joining us</p>
           </div>
 
           <div className="space-y-4">
@@ -885,7 +883,7 @@ export default function WtEGreenBondsPlatform() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>© 2024 GreenPower Africa. All rights reserved.</p>
+            <p>© 2024 EcoBond. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-emerald-400 transition-colors">Twitter</a>
               <a href="#" className="hover:text-emerald-400 transition-colors">Telegram</a>
