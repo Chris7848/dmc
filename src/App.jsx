@@ -1,11 +1,11 @@
-import EcolariumClone from './clone.jsx'
-import './App.css'
+import EcoBondPlatform from './ecobond.jsx'
+import './index.css'
 
 function App() {
 
   return (
     <>
-      <EcolariumClone/>
+      <EcoBondPlatform/>
     </>
   )
 }
