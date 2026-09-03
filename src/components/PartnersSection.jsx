@@ -1,61 +1,67 @@
 import React from 'react';
-import { Users, DollarSign, CheckCircle, Zap, Link as LinkIcon, Activity } from 'lucide-react';
-
-const partners = [
-  { name: "Lagos Municipal Authority", type: "Government", icon: <Users className="w-6 h-6" /> },
-  { name: "African Development Bank", type: "Financial", icon: <DollarSign className="w-6 h-6" /> },
-  { name: "UN Clean Development", type: "Verification", icon: <CheckCircle className="w-6 h-6" /> },
-  { name: "Arbitrum Foundation", type: "Technology", icon: <Zap className="w-6 h-6" /> }
-];
+import { ArrowRight } from 'lucide-react';
 
 export default function PartnersSection() {
+  const partners = [
+    {
+      title: 'GOVERNMENTS',
+      description: 'Supporting municipal priorities and public-private partnerships to build essential infrastructure.',
+      image: 'https://images.pexels.com/photos/2566852/pexels-photo-2566852.jpeg?auto=compress&cs=tinysrgb&w=400',
+      link: '#governments'
+    },
+    {
+      title: 'PROJECT DEVELOPERS',
+      description: 'Empowering waste operators, recyclers, energy developers and infrastructure companies to grow.',
+      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80',
+      link: '#developers'
+    },
+    {
+      title: 'CAPITAL PROVIDERS',
+      description: 'Connecting impact investors, climate funds, institutions and family offices to quality assets.',
+      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80',
+      link: '#capital'
+    }
+  ];
+
   return (
-    <section className="py-16 bg-linear-to-br from-slate-50 to-emerald-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Partners & Verification</h2>
-          <p className="text-xl text-gray-600">Trusted by governments & Brands like <a href="http://chanjadatti.com" target="_blank" rel="noopener noreferrer">CHANJA DATTI</a></p>
-        </div>
+    <section className="py-20 bg-[#fafafa]">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <div className="grid lg:grid-cols-[1fr_3fr] gap-12 lg:gap-8 items-start">
+          
+          {/* Left Text */}
+          <div className="pr-4">
+            <div className="text-[#32d96c] font-bold tracking-[0.1em] text-[11px] uppercase mb-3">Who We Work With</div>
+            <h2 className="text-[32px] md:text-[36px] font-bold text-gray-900 leading-[1.15] tracking-tight">
+              Partnerships<br/>That Build<br/>The Future
+            </h2>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {partners.map((partner, idx) => (
-            <div key={idx} className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all">
-              <div className="flex flex-col items-center text-center">
-                <div className="bg-emerald-100 p-4 rounded-xl mb-4">
-                  {partner.icon}
+          {/* Right Cards Grid */}
+          <div>
+            <div className="grid md:grid-cols-3 gap-5">
+              {partners.map((partner, idx) => (
+                <div key={idx} className="flex flex-col bg-white rounded-xl overflow-hidden shadow-xs border border-gray-200 hover:shadow-md transition-shadow group">
+                  <div className="h-[140px] overflow-hidden">
+                    <img 
+                      src={partner.image} 
+                      alt={partner.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                  </div>
+                  <div className="p-5 flex flex-col flex-1">
+                    <h3 className="text-[11px] font-bold text-gray-900 mb-2 tracking-widest">{partner.title}</h3>
+                    <p className="text-[12px] text-gray-500 leading-[1.5] font-medium mb-4 flex-1">
+                      {partner.description}
+                    </p>
+                    <a href={partner.link} className="inline-flex items-center text-[11px] font-bold text-[#009b4d] hover:text-[#32d96c] transition-colors tracking-wide uppercase">
+                      Learn More <ArrowRight className="w-[14px] h-[14px] ml-1.5" />
+                    </a>
+                  </div>
                 </div>
-                <h4 className="font-bold text-gray-900 mb-2">{partner.name}</h4>
-                <span className="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">{partner.type}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-white border-2 border-gray-200 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Blockchain Integration</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="flex items-start space-x-3">
-              <LinkIcon className="w-6 h-6 text-purple-600 mt-1" />
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2">Arbitrum Blockchain</h4>
-                <p className="text-sm text-gray-600">Fast, low cost transactions</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <Activity className="w-6 h-6 text-blue-600 mt-1" />
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2">IoT Oracles</h4>
-                <p className="text-sm text-gray-600">Real-time data feeds from WtE facilities</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <DollarSign className="w-6 h-6 text-emerald-600 mt-1" />
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2">Yields</h4>
-                <p className="text-sm text-gray-600">Get access to good interest</p>
-              </div>
+              ))}
             </div>
           </div>
+          
         </div>
       </div>
     </section>

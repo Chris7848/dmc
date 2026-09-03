@@ -1,75 +1,78 @@
 import React from 'react';
-import { Trash2, Home, Wind, ArrowRight } from 'lucide-react';
-
-const impactBreakdown = [
-  { amount: "$10", waste: "0.5 tons", homes: "2", co2: "0.3 tons" },
-  { amount: "$50", waste: "2.5 tons", homes: "10", co2: "1.5 tons" },
-  { amount: "$100", waste: "5 tons", homes: "20", co2: "3 tons" },
-  { amount: "$500", waste: "25 tons", homes: "100", co2: "15 tons" }
-];
+import { Leaf, Recycle, Users, DollarSign, Globe } from 'lucide-react';
 
 export default function ImpactSection() {
+  const stats = [
+    {
+      icon: Leaf,
+      value: '10+',
+      label: 'Projects Financed',
+      target: 'Pilot Target'
+    },
+    {
+      icon: Recycle,
+      value: '100,000+',
+      label: 'Tonnes of Waste Diverted',
+      target: 'Pilot Target'
+    },
+    {
+      icon: Users,
+      value: '5,000+',
+      label: 'Green Jobs Created',
+      target: 'Pilot Target'
+    },
+    {
+      icon: DollarSign,
+      value: '$50M+',
+      label: 'Capital Mobilized',
+      target: 'Pilot Target'
+    },
+    {
+      icon: Globe,
+      value: '1M+',
+      label: 'People Impacted',
+      target: 'Pilot Target'
+    }
+  ];
+
   return (
-    <section className="py-16 bg-white" id="impact">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Your Investment Impact</h2>
-          <p className="text-xl text-gray-600">See exactly how your money powers change</p>
-        </div>
+    <section id="impact" className="py-20 bg-white border-b border-gray-100">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-start">
+          
+          <div className="lg:w-[22%]">
+            <div className="text-[#32d96c] font-bold tracking-[0.1em] text-[11px] uppercase mb-3">Impact We Create</div>
+            <h2 className="text-[32px] md:text-[36px] font-bold text-gray-900 leading-[1.15] tracking-tight">
+              Infrastructure.<br/>Measured.
+            </h2>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {impactBreakdown.map((impact, idx) => (
-            <div key={idx} className="bg-linear-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-6 hover:shadow-xl transition-all transform hover:-translate-y-2">
-              <div className="text-center mb-4">
-                <div className="text-3xl font-bold text-emerald-600 mb-2">{impact.amount}</div>
-                <div className="text-sm text-gray-600">Investment</div>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-2 text-sm">
-                  <Trash2 className="w-5 h-5 text-orange-500" />
-                  <span className="text-gray-700"><strong>{impact.waste}</strong> waste removed</span>
+          <div className="lg:w-[78%] w-full">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {stats.map((stat, idx) => (
+                <div key={idx} className="flex flex-col border border-gray-200 rounded-xl p-5 shadow-xs bg-white hover:border-[#32d96c]/50 transition-colors">
+                  {/* Top: Icon + Target Label */}
+                  <div className="flex items-center space-x-2 mb-4">
+                    <div className="w-8 h-8 rounded-full bg-[#f4faf7] flex items-center justify-center">
+                      <stat.icon className="w-4 h-4 text-[#009b4d]" strokeWidth={1.5} />
+                    </div>
+                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none">{stat.target}</span>
+                  </div>
+                  
+                  {/* Number */}
+                  <div className="text-[26px] md:text-[28px] font-bold text-[#009b4d] tracking-tight leading-none mb-2">
+                    {stat.value}
+                  </div>
+                  
+                  {/* Label */}
+                  <div className="text-[12px] font-bold text-gray-800 leading-[1.4]">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="flex items-center space-x-2 text-sm">
-                  <Home className="w-5 h-5 text-blue-500" />
-                  <span className="text-gray-700"><strong>{impact.homes}</strong> homes powered</span>
-                </div>
-                <div className="flex items-center space-x-2 text-sm">
-                  <Wind className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700"><strong>{impact.co2}</strong> CO₂ saved</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Video Explainer Placeholder */}
-        <div className="mt-16 bg-linear-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-3xl font-bold mb-4">How It Works</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Watch how your $100 investment transforms communities: removes 5 tons of waste, 
-                powers 20 homes for a year, and prevents 3 tons of CO₂ emissions.
-              </p>
-              <div className='flex gap-10 items-center'>
-                <button className="bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-full font-semibold transition-all flex items-center space-x-2">
-                  <span>Watch Video</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <span className="text-orange-700 flex space-x-2 bg-orange-200 px-6 py-3 rounded-full text-sm font-semibold items-center justify-center">
-                  Coming Soon
-                </span>
-              </div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl aspect-video flex items-center justify-center border-2 border-white/20">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-white/30 transition-all">
-                  <div className="w-0 h-0 border-l-20 border-l-white border-t-12 border-t-transparent border-b-12 border-b-transparent ml-1"></div>
-                </div>
-                <p className="text-gray-300">3:45 Impact Explainer</p>
-              </div>
+              ))}
             </div>
           </div>
+          
         </div>
       </div>
     </section>
