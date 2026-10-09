@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Youtube, Mail, ArrowRight } from 'lucide-react';
 import Logo from '../assets/eco2.jpg';
 
@@ -34,23 +35,29 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h4 className="text-[10px] font-bold mb-4 uppercase tracking-[0.1em] text-gray-400">Quick Links</h4>
             <ul className="space-y-2.5 text-[12px] font-medium text-gray-400">
-              <li><a href="#about" className="hover:text-[#32d96c] transition-colors">About</a></li>
-              <li><a href="#how-it-works" className="hover:text-[#32d96c] transition-colors">How It Works</a></li>
-              <li><a href="#infrastructure" className="hover:text-[#32d96c] transition-colors">Infrastructure</a></li>
-              <li><a href="#impact" className="hover:text-[#32d96c] transition-colors">Impact</a></li>
-              <li><a href="#insights" className="hover:text-[#32d96c] transition-colors">Insights</a></li>
-              <li><a href="#contact" className="hover:text-[#32d96c] transition-colors">Contact</a></li>
+              <li><a href="/#about" className="hover:text-[#32d96c] transition-colors">About</a></li>
+              <li><a href="/#infrastructure" className="hover:text-[#32d96c] transition-colors">Infrastructure</a></li>
+              <li><a href="/#how-it-works" className="hover:text-[#32d96c] transition-colors">How It Works</a></li>
+              <li><a href="/#initiatives" className="hover:text-[#32d96c] transition-colors">Delivery Tracks</a></li>
+              <li><a href="/#impact" className="hover:text-[#32d96c] transition-colors">Impact Mandate</a></li>
+              <li><Link to="/faq" className="hover:text-[#32d96c] transition-colors">FAQs</Link></li>
             </ul>
           </div>
 
           {/* Connect */}
           <div className="lg:col-span-1">
             <h4 className="text-[10px] font-bold mb-4 uppercase tracking-[0.1em] text-gray-400">Connect</h4>
+            <p className="text-[11px] text-gray-400 mb-2 leading-relaxed">
+              Deal & Partnership Inquiries:
+            </p>
+            <a href="mailto:uyotdavid@gmail.com" className="text-[11px] text-[#32d96c] hover:underline font-mono block mb-4">
+              uyotdavid@gmail.com
+            </a>
             <div className="flex space-x-3.5">
-              <a href="#" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Linkedin className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Twitter className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Youtube className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Mail className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
+              <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Linkedin className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
+              <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Twitter className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
+              <a href="#" aria-label="YouTube" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Youtube className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
+              <a href="mailto:uyotdavid@gmail.com" aria-label="Email" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Mail className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
             </div>
           </div>
 
@@ -58,12 +65,12 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h4 className="text-[10px] font-bold mb-4 uppercase tracking-[0.1em] text-gray-400">Newsletter</h4>
             <p className="text-[11px] font-medium text-gray-400 mb-3 leading-[1.5]">
-              Stay updated on our impact and latest insights.
+              Stay updated on African climate infrastructure insights.
             </p>
             <form className="flex" onSubmit={(e) => e.preventDefault()}>
               <input 
                 type="email" 
-                placeholder="Enter your email" 
+                placeholder="Enter work email" 
                 className="bg-[#0a1f14] text-[12px] text-white px-3 py-2 rounded-l-md focus:outline-hidden focus:ring-1 focus:ring-[#32d96c] w-full border border-[#163b27] placeholder-gray-600"
               />
               <button 
@@ -77,14 +84,20 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Mobile Copyright & Links */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-[#123624] text-[11px] text-gray-500 font-medium">
-          <div className="lg:hidden mb-4 md:mb-0">
-             &copy; 2025 EcoBond. All rights reserved.
-          </div>
-          <div className="flex space-x-4">
-            <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">Terms of Use</a>
+        {/* Disclaimer & Copyright */}
+        <div className="pt-6 border-t border-[#123624] text-[11px] text-gray-500 font-medium space-y-3">
+          <p className="text-[10.5px] leading-relaxed text-gray-500">
+            <strong>Disclaimer:</strong> EcoBond operates as a climate infrastructure origination, structuring, and capital mobilization platform. Market figures cited reflect published macroeconomic and development finance data. Demonstration pipelines, targets, and sample models are presented for illustrative pilot demonstration purposes.
+          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center pt-2">
+            <div>
+              &copy; 2025 EcoBond. Building the financial infrastructure for Africa's climate transition.
+            </div>
+            <div className="flex space-x-4 mt-2 md:mt-0">
+              <Link to="/faq" className="hover:text-gray-300 transition-colors">FAQs</Link>
+              <Link to="/education" className="hover:text-gray-300 transition-colors">Research</Link>
+              <Link to="/case-studies" className="hover:text-gray-300 transition-colors">Case Models</Link>
+            </div>
           </div>
         </div>
       </div>

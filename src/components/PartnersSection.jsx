@@ -4,22 +4,22 @@ import { ArrowRight } from 'lucide-react';
 export default function PartnersSection() {
   const partners = [
     {
-      title: 'GOVERNMENTS',
-      description: 'Supporting municipal priorities and public-private partnerships to build essential infrastructure.',
+      title: 'GOVERNMENT & INSTITUTIONS',
+      description: 'State and federal agencies, municipalities, and development programs providing access to public infrastructure pipelines and local opportunities.',
       image: 'https://images.pexels.com/photos/2566852/pexels-photo-2566852.jpeg?auto=compress&cs=tinysrgb&w=400',
-      link: '#governments'
+      link: '#partner'
     },
     {
-      title: 'PROJECT DEVELOPERS',
-      description: 'Empowering waste operators, recyclers, energy developers and infrastructure companies to grow.',
+      title: 'DEVELOPER NETWORK',
+      description: 'Waste operators, recyclers, clean energy developers, engineers, and technical consultants seeking structured debt, equity, and blended finance.',
       image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80',
       link: '#developers'
     },
     {
       title: 'CAPITAL PROVIDERS',
-      description: 'Connecting impact investors, climate funds, institutions and family offices to quality assets.',
+      description: 'DFIs, infrastructure funds, climate funds, commercial banks, and impact investors seeking bankable, screened African climate assets.',
       image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80',
-      link: '#capital'
+      link: '#capital-providers'
     }
   ];
 

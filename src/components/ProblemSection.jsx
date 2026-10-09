@@ -58,9 +58,9 @@ export default function ProblemSection() {
               <div className="bg-[#f4faf7] border border-dashed border-[#bce8cf] rounded-xl p-6 flex-1 text-center relative z-10 flex flex-col justify-center">
                 <div className="text-gray-500 font-bold text-[10px] tracking-[0.15em] mb-4 uppercase">The Financing Gap</div>
                 <ul className="space-y-2.5 text-[13px] text-gray-700 font-medium">
-                  <li>Community scale projects</li>
-                  <li>Early stage | Underserved</li>
-                  <li>High impact | High potential</li>
+                  <li>Expansion-ready developers</li>
+                  <li>Unstructured risk & models</li>
+                  <li>Lack investment readiness</li>
                 </ul>
               </div>
 
@@ -81,10 +81,10 @@ export default function ProblemSection() {
                 </div>
                 <ul className="space-y-3.5">
                   {[
-                    'Project identification',
-                    'Financial structuring',
-                    'Capital mobilization',
-                    'Scalable impact'
+                    '4-Pillar due diligence',
+                    'Bankable SPV structuring',
+                    'Blended capital matching',
+                    'Monitoring & verified scale'
                   ].map((item, i) => (
                     <li key={i} className="flex items-center text-[13px] text-emerald-50 font-medium">
                       <CheckCircle2 className="w-[14px] h-[14px] text-[#32d96c] mr-2.5 shrink-0" strokeWidth={2.5} />

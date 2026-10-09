@@ -1,60 +1,90 @@
 import React from 'react';
+import Navigation from './Navigation';
+import Footer from './Footer';
+import { Mail, ArrowRight } from 'lucide-react';
 
 const faqs = [
   {
-    q: "How do I earn returns?",
-    a: "You earn yields from the companies we invest in their infrastructure to your wallet, getting your principal back plus any accumulated carbon credits anytime you want."
+    q: "What is EcoBond's role in African climate infrastructure?",
+    a: "EcoBond operates as the missing origination and structuring layer. Africa faces a >$240B annual climate-finance gap, yet capital remains unallocated because many projects lack the rigorous assessment, financial structuring, and investment readiness required by institutional funders. EcoBond identifies, de-risks, and structures expansion-ready projects so capital can be deployed efficiently."
   },
   {
-    q: "What happens to my investment?",
-    a: "Your funds finance WtE infrastructure. As waste is processed and energy sold, you earn returns. All transactions are transparent on Arbitrum blockchain."
+    q: "What is the 4-Pillar Assessment methodology?",
+    a: "Every project undergoes structured underwriting across four pillars: Technical Feasibility (engineering viability, equipment warranties, supply continuity), Financial Viability (revenue models, debt service coverage, unit economics), Legal & Regulatory (permits, land titles, SPV structuring), and ESG/Impact (verified emissions avoidance, waste diversion, job creation)."
   },
   {
-    q: "Can I sell my bonds before maturity?",
-    a: "Yes! Bonds are tokenized and tradeable on secondary markets. You can exit anytime through our marketplace."
+    q: "What financing instruments and capital providers does EcoBond work with?",
+    a: "We structure bankable capital stacks incorporating senior project debt, mezzanine loans, equity, and concessional/blended finance. We match these structured assets with Development Finance Institutions (DFIs), infrastructure funds, climate funds, commercial banks, and impact investors."
   },
   {
-    q: "What are the risks?",
-    a: "Main risks include: project delays, revenue fluctuations from energy sales, and regulatory changes. All projects are insured and backed by government contracts."
+    q: "What sectors does EcoBond prioritize?",
+    a: "Our mandate concentrates on four operational and expansion-ready verticals: Waste Infrastructure, Recycling Facilities & Materials Recovery, Clean & Distributed Renewable Energy (such as mini-grids and micro-solar), and Climate Resilience Infrastructure."
+  },
+  {
+    q: "What is EcoBond's commercial business model?",
+    a: "EcoBond operates a transparent commercial model: milestone-based Project Structuring fees during preparation, a 4% Success Fee upon successful capital mobilization at financial close, and an ongoing 0.5%–1% annual platform and project servicing fee for continued monitoring and impact verification."
+  },
+  {
+    q: "How do capital providers access confidential project data rooms?",
+    a: "Qualified institutional capital providers can browse vetted project teasers and request controlled Virtual Data Room (VDR) access to review comprehensive Investment Memoranda, audited financials, technical feasibility reports, and legal documentation under confidentiality terms."
   }
 ];
 
 export default function FAQSection() {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600">Everything you need to know before joining us</p>
-        </div>
+    <div className="min-h-screen bg-white flex flex-col justify-between">
+      <Navigation />
 
-        <div className="space-y-4">
-          {faqs.map((faq, idx) => (
-            <div key={idx} className="bg-linear-to-br from-slate-50 to-emerald-50 border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
-              <h4 className="font-bold text-gray-900 mb-3 text-lg flex items-start">
-                <span className="bg-emerald-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 shrink-0 mt-0.5">
-                  ?
-                </span>
-                {faq.q}
-              </h4>
-              <p className="text-gray-700 leading-relaxed ml-9">{faq.a}</p>
+      <main className="py-16 flex-1">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="text-[#009b4d] font-bold tracking-[0.1em] text-[11px] uppercase mb-2">Institutional FAQs</div>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-base text-gray-600 max-w-xl mx-auto">
+              Everything you need to know about EcoBond's origination, 4-pillar assessment, and capital mobilization process.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="bg-[#fafafa] border border-gray-200 rounded-xl p-6 hover:border-emerald-300 transition-all shadow-2xs">
+                <h2 className="font-bold text-gray-900 mb-3 text-base flex items-start">
+                  <span className="bg-[#009b4d] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-3 shrink-0 mt-0.5">
+                    ?
+                  </span>
+                  {faq.q}
+                </h2>
+                <p className="text-[13.5px] text-gray-600 leading-relaxed ml-8">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-linear-to-br from-[#0a2f1d] to-[#051a10] text-white rounded-2xl p-8 text-center shadow-lg">
+            <h3 className="text-2xl font-bold mb-3">Looking to Partner or Deploy Capital?</h3>
+            <p className="text-sm text-emerald-100/80 mb-6 max-w-md mx-auto">
+              Our partnerships and structuring team is available to discuss project origination mandates, DFI engagement, and capital provider requirements.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/#partner"
+                className="bg-[#32d96c] hover:bg-[#2bc45d] text-[#031d10] px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-wider transition-all inline-flex items-center justify-center gap-1.5"
+              >
+                Submit Partnership Inquiry <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="mailto:uyotdavid@gmail.com"
+                className="border border-white/30 hover:border-white text-white px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-wider transition-all inline-flex items-center justify-center gap-1.5"
+              >
+                <Mail className="w-4 h-4" /> Contact Deal Team
+              </a>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-12 bg-linear-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Still Have Questions?</h3>
-          <p className="text-gray-600 mb-6">Our team is here to help you understand your investment</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all">
-              Schedule a Call
-            </button>
-            <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-full font-semibold transition-all">
-              Join Telegram Community
-            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </main>
+
+      <Footer />
+    </div>
   );
 }

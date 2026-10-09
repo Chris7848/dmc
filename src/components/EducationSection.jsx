@@ -1,98 +1,117 @@
 import React from 'react';
-import { Trash2, Zap, TrendingUp } from 'lucide-react';
+import Navigation from './Navigation';
+import Footer from './Footer';
+import { Trash2, Zap, TrendingUp, ArrowRight } from 'lucide-react';
 
 export default function EducationSection() {
   return (
-    <section className="py-16 bg-linear-to-br from-slate-900 to-emerald-900 text-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Why Waste-to-Energy Matters in Africa</h2>
-          <p className="text-xl text-gray-300">The problem, the solution, and your role</p>
-        </div>
+    <div className="min-h-screen bg-white flex flex-col justify-between">
+      <Navigation />
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <div className="bg-red-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-              <Trash2 className="w-8 h-8 text-red-400" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4">The Problem</h3>
-            <ul className="space-y-3 text-gray-300">
-              <li className="flex items-start">
-                <span className="text-red-400 mr-2">•</span>
-                Africa generates 125M tons of waste annually
-              </li>
-              <li className="flex items-start">
-                <span className="text-red-400 mr-2">•</span>
-                Only 10% is properly managed
-              </li>
-              <li className="flex items-start">
-                <span className="text-red-400 mr-2">•</span>
-                600M people lack reliable electricity
-              </li>
-              <li className="flex items-start">
-                <span className="text-red-400 mr-2">•</span>
-                Waste dumps release massive CO₂ emissions
-              </li>
-            </ul>
+      <main className="py-16 bg-linear-to-br from-slate-950 via-[#0a2f1d] to-[#031d10] text-white flex-1">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="text-[#32d96c] font-bold tracking-[0.1em] text-[11px] uppercase mb-2">Market Insights</div>
+            <h1 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">
+              Why Climate Infrastructure Matters in Africa
+            </h1>
+            <p className="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Addressing the continent's infrastructure demand, bankability challenges, and commercial transition opportunity.
+            </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <div className="bg-emerald-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-              <Zap className="w-8 h-8 text-emerald-400" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* The Problem */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all">
+              <div className="bg-red-500/20 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-red-500/30">
+                <Trash2 className="w-7 h-7 text-red-400" />
+              </div>
+              <h2 className="text-xl font-bold mb-4 text-white">The Financing Gap</h2>
+              <ul className="space-y-3.5 text-xs text-gray-300 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-red-400 mr-2 font-bold">•</span>
+                  Africa requires more than $240B annually in climate finance, with Nigeria facing a $27B+ annual deficit.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-400 mr-2 font-bold">•</span>
+                  Africa faces a $1.45 Trillion climate funding gap by 2030, yet only $13B in sustainable debt was issued in 2024.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-400 mr-2 font-bold">•</span>
+                  Over 125M tons of municipal waste generated annually across Africa, with under 30% formally collected.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-400 mr-2 font-bold">•</span>
+                  Over 600M people lack grid electricity access, forcing reliance on expensive, polluting diesel generators.
+                </li>
+              </ul>
             </div>
-            <h3 className="text-2xl font-bold mb-4">The Solution</h3>
-            <ul className="space-y-3 text-gray-300">
-              <li className="flex items-start">
-                <span className="text-emerald-400 mr-2">•</span>
-                Convert waste into clean electricity
-              </li>
-              <li className="flex items-start">
-                <span className="text-emerald-400 mr-2">•</span>
-                Power 50+ homes per ton of waste
-              </li>
-              <li className="flex items-start">
-                <span className="text-emerald-400 mr-2">•</span>
-                Reduce landfill pollution by 90%
-              </li>
-              <li className="flex items-start">
-                <span className="text-emerald-400 mr-2">•</span>
-                Generate carbon credits for investors
-              </li>
-            </ul>
+
+            {/* The Solution */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all">
+              <div className="bg-emerald-500/20 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-emerald-500/30">
+                <Zap className="w-7 h-7 text-emerald-400" />
+              </div>
+              <h2 className="text-xl font-bold mb-4 text-white">Bankable Infrastructure</h2>
+              <ul className="space-y-3.5 text-xs text-gray-300 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-[#32d96c] mr-2 font-bold">•</span>
+                  Convert municipal solid waste into baseload clean electricity, biogas, and high-value recyclable polymers.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#32d96c] mr-2 font-bold">•</span>
+                  Deploy decentralized solar mini-grids to address the $7.5–15B small-scale clean energy gap.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#32d96c] mr-2 font-bold">•</span>
+                  Divert over 90% of landfill waste while drastically reducing fugitive greenhouse gas emissions.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#32d96c] mr-2 font-bold">•</span>
+                  Structure commercial SPVs with long-term offtake contracts that satisfy international DFI covenants.
+                </li>
+              </ul>
+            </div>
+
+            {/* The Impact */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all">
+              <div className="bg-blue-500/20 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-blue-500/30">
+                <TrendingUp className="w-7 h-7 text-blue-400" />
+              </div>
+              <h2 className="text-xl font-bold mb-4 text-white">Commercial Scale</h2>
+              <ul className="space-y-3.5 text-xs text-gray-300 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2 font-bold">•</span>
+                  Mobilize blended finance by using catalytic development capital to de-risk senior commercial debt.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2 font-bold">•</span>
+                  Capture value from Nigeria's $2.3B waste market (expanding 5.2% annually) through formal recovery.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2 font-bold">•</span>
+                  Create thousands of certified green jobs across collection, sorting, and plant operations.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2 font-bold">•</span>
+                  Replicate standardized transaction templates across Nigeria, Kenya, Ghana, and broader African markets.
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <div className="bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-              <TrendingUp className="w-8 h-8 text-blue-400" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Your Impact</h3>
-            <ul className="space-y-3 text-gray-300">
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                Earn returns on investment
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                Power thousands of homes
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                Remove tons of waste from communities
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                Fight climate change measurably
-              </li>
-            </ul>
+          <div className="mt-12 text-center">
+            <a
+              href="/#partner"
+              className="inline-flex items-center gap-2 bg-[#32d96c] text-[#031d10] hover:bg-[#2bc45d] px-8 py-3.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-xl"
+            >
+              Explore Partnership Opportunities <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
+      </main>
 
-        <div className="mt-12 text-center">
-          <button className="bg-white text-emerald-900 hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-xl">
-            Download Full Impact Report (PDF)
-          </button>
-        </div>
-      </div>
-    </section>
+      <Footer />
+    </div>
   );
 }

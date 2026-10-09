@@ -1,37 +1,37 @@
 import React from 'react';
-import { Search, FileText, Users, Building2, BarChart3, Infinity as InfinityIcon, ArrowRight } from 'lucide-react';
+import { Search, ClipboardCheck, Layers, Landmark, TrendingUp, Repeat, ArrowRight } from 'lucide-react';
 
 export default function HowItWorksSection() {
   const steps = [
     {
       num: '01',
       title: 'IDENTIFY',
-      desc: 'We identify viable infrastructure projects with measurable impact.',
+      desc: 'Source operational and expansion-ready projects fitting EcoBond’s mandate.',
       icon: Search
     },
     {
       num: '02',
-      title: 'STRUCTURE',
-      desc: 'We develop the financial, operational and investment structure to make it investable.',
-      icon: FileText
+      title: 'ASSESS',
+      desc: 'Execute 4-pillar underwriting: Technical, Financial, Legal, and ESG/Impact.',
+      icon: ClipboardCheck
     },
     {
       num: '03',
-      title: 'MOBILIZE',
-      desc: 'We connect projects with the right capital partners.',
-      icon: Users
+      title: 'STRUCTURE',
+      desc: 'Build bankable financial models, project SPVs, and blended capital stacks.',
+      icon: Layers
     },
     {
       num: '04',
-      title: 'BUILD',
-      desc: 'Capital is deployed into real-world infrastructure.',
-      icon: Building2
+      title: 'CONNECT CAPITAL',
+      desc: 'Match investment-ready projects with DFIs, climate funds, and banks.',
+      icon: Landmark
     },
     {
       num: '05',
-      title: 'MEASURE',
-      desc: 'We track performance, financial returns and environmental impact.',
-      icon: BarChart3
+      title: 'SCALE',
+      desc: 'Deploy capital, expand capacity, and verify real environmental outcomes.',
+      icon: TrendingUp
     }
   ];
 
@@ -45,10 +45,10 @@ export default function HowItWorksSection() {
           <div className="pr-4">
             <div className="text-[#32d96c] font-bold tracking-[0.1em] text-[11px] uppercase mb-3">How It Works</div>
             <h2 className="text-[32px] md:text-[36px] font-bold text-gray-900 mb-4 leading-[1.15] tracking-tight">
-              From Opportunity<br/>to Lasting Impact
+              From Opportunity<br/>to Financeable Asset
             </h2>
             <p className="text-[14px] text-gray-600 leading-relaxed">
-              We build the pathway that connects viable projects with the capital they need to thrive.
+              EcoBond builds the missing bridge connecting viable infrastructure with the commercial, DFI, and blended capital required to scale.
             </p>
           </div>
           
@@ -58,7 +58,6 @@ export default function HowItWorksSection() {
               
               {/* Connecting Background Line - Green Arrow Line */}
               <div className="hidden md:flex absolute top-[28px] left-8 right-[160px] h-[1.5px] bg-[#32d96c] -z-10 items-center justify-between">
-                {/* Small arrows along the line */}
                 <ArrowRight className="w-4 h-4 text-[#32d96c] absolute left-[15%]" strokeWidth={2} />
                 <ArrowRight className="w-4 h-4 text-[#32d96c] absolute left-[35%]" strokeWidth={2} />
                 <ArrowRight className="w-4 h-4 text-[#32d96c] absolute left-[55%]" strokeWidth={2} />
@@ -69,13 +68,13 @@ export default function HowItWorksSection() {
               {steps.map((step, idx) => (
                 <div key={idx} className="relative flex flex-col items-start text-left w-full md:w-[130px] mb-8 md:mb-0 pr-4">
                   {/* Icon Circle */}
-                  <div className="w-14 h-14 bg-[#fafafa] rounded-full flex items-center justify-center mb-5 z-10 transition-transform hover:scale-110 duration-300 group">
-                    <step.icon className="w-[28px] h-[28px] text-gray-700 group-hover:text-[#009b4d] transition-colors" strokeWidth={1} />
+                  <div className="w-14 h-14 bg-[#fafafa] rounded-full flex items-center justify-center mb-5 z-10 transition-transform hover:scale-110 duration-300 group shadow-xs border border-gray-200">
+                    <step.icon className="w-[26px] h-[26px] text-gray-700 group-hover:text-[#009b4d] transition-colors" strokeWidth={1.5} />
                   </div>
                   
                   {/* Content */}
                   <div className="text-gray-400 font-medium text-[11px] mb-2">{step.num}</div>
-                  <h3 className="text-[11px] font-bold text-gray-900 mb-2 tracking-[0.05em] uppercase">{step.title}</h3>
+                  <h3 className="text-[11px] font-bold text-gray-900 mb-2 tracking-[0.05em] uppercase leading-tight">{step.title}</h3>
                   <p className="text-[11.5px] text-gray-500 leading-[1.5] font-medium">{step.desc}</p>
                   
                   {/* Mobile connecting arrow */}
@@ -90,10 +89,10 @@ export default function HowItWorksSection() {
 
               {/* Reinvest Box */}
               <div className="w-full md:w-[130px] bg-[#0a2f1d] rounded-2xl p-5 text-center text-white shadow-xl flex flex-col items-center justify-center z-10 relative">
-                <InfinityIcon className="w-9 h-9 text-[#32d96c] mb-3" strokeWidth={1.5} />
-                <h3 className="text-[11px] font-bold mb-2 tracking-[0.1em] uppercase">Reinvest</h3>
+                <Repeat className="w-8 h-8 text-[#32d96c] mb-3" strokeWidth={1.75} />
+                <h3 className="text-[11px] font-bold mb-2 tracking-[0.1em] uppercase">Scale & Repeat</h3>
                 <p className="text-[10px] text-emerald-50/70 leading-[1.4] font-medium">
-                  Sustainable returns create more impact at scale.
+                  Successful execution generates repeat mandates and regional expansion.
                 </p>
               </div>
 

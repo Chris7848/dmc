@@ -40,14 +40,17 @@ export default function ImpactSection() {
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-start">
           
-          <div className="lg:w-[22%]">
-            <div className="text-[#32d96c] font-bold tracking-[0.1em] text-[11px] uppercase mb-3">Impact We Create</div>
-            <h2 className="text-[32px] md:text-[36px] font-bold text-gray-900 leading-[1.15] tracking-tight">
+          <div className="lg:w-[26%]">
+            <div className="text-[#32d96c] font-bold tracking-[0.1em] text-[11px] uppercase mb-3">Impact Mandate</div>
+            <h2 className="text-[32px] md:text-[36px] font-bold text-gray-900 leading-[1.15] tracking-tight mb-3">
               Infrastructure.<br/>Measured.
             </h2>
+            <p className="text-[12px] text-gray-500 font-medium leading-[1.6]">
+              Indicative pilot mandate targets across initial origination pipelines. Performance and environmental metrics are structured for third-party verification upon financial close.
+            </p>
           </div>
 
-          <div className="lg:w-[78%] w-full">
+          <div className="lg:w-[74%] w-full">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {stats.map((stat, idx) => (
                 <div key={idx} className="flex flex-col border border-gray-200 rounded-xl p-5 shadow-xs bg-white hover:border-[#32d96c]/50 transition-colors">
@@ -56,20 +59,23 @@ export default function ImpactSection() {
                     <div className="w-8 h-8 rounded-full bg-[#f4faf7] flex items-center justify-center">
                       <stat.icon className="w-4 h-4 text-[#009b4d]" strokeWidth={1.5} />
                     </div>
-                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none">{stat.target}</span>
+                    <span className="text-[8.5px] font-bold text-gray-400 uppercase tracking-wider leading-none">Pilot Mandate</span>
                   </div>
                   
                   {/* Number */}
-                  <div className="text-[26px] md:text-[28px] font-bold text-[#009b4d] tracking-tight leading-none mb-2">
+                  <div className="text-[24px] md:text-[26px] font-bold text-[#009b4d] tracking-tight leading-none mb-2">
                     {stat.value}
                   </div>
                   
                   {/* Label */}
-                  <div className="text-[12px] font-bold text-gray-800 leading-[1.4]">
+                  <div className="text-[11.5px] font-bold text-gray-800 leading-[1.35]">
                     {stat.label}
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="mt-4 text-[11px] text-gray-400 italic">
+              * Strategic pilot objectives for pipeline underwriting and blended capital mobilization. Not historical transactions.
             </div>
           </div>
           
