@@ -54,7 +54,7 @@ export default function Footer() {
               uyotdavid@gmail.com
             </a>
             <div className="flex space-x-3.5">
-              <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Linkedin className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
+              <a href="https://www.linkedin.com/company/terrayield-ltd/" aria-label="LinkedIn" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Linkedin className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
               <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Twitter className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
               <a href="#" aria-label="YouTube" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Youtube className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
               <a href="mailto:uyotdavid@gmail.com" aria-label="Email" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Mail className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
