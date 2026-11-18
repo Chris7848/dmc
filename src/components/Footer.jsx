@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Youtube, Mail, ArrowRight } from 'lucide-react';
+import { Linkedin, Youtube, Mail, ArrowRight } from 'lucide-react';
 import Logo from '../assets/eco2.jpg';
+
+function XIcon({ className = "w-[16px] h-[16px]" }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   return (
@@ -53,9 +61,17 @@ export default function Footer() {
             <a href="mailto:uyotdavid@gmail.com" className="text-[11px] text-[#32d96c] hover:underline font-mono block mb-4">
               uyotdavid@gmail.com
             </a>
-            <div className="flex space-x-3.5">
+            <div className="flex space-x-3.5 items-center">
               <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Linkedin className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
-              <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Twitter className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
+              <a 
+                href="https://x.com/ECOBONDx" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="X (formerly Twitter)" 
+                className="text-gray-400 hover:text-[#32d96c] transition-colors flex items-center"
+              >
+                <XIcon className="w-[16px] h-[16px]" />
+              </a>
               <a href="#" aria-label="YouTube" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Youtube className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
               <a href="mailto:uyotdavid@gmail.com" aria-label="Email" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Mail className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
             </div>
