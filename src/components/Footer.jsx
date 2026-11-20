@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1"> 
             <h4 className="text-[10px] font-bold mb-4 uppercase tracking-[0.1em] text-gray-400">Newsletter</h4>
             <p className="text-[11px] font-medium text-gray-400 mb-3 leading-[1.5]">
               Stay updated on African climate infrastructure insights.
