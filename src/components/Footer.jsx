@@ -61,17 +61,9 @@ export default function Footer() {
             <a href="mailto:uyotdavid@gmail.com" className="text-[11px] text-[#32d96c] hover:underline font-mono block mb-4">
               uyotdavid@gmail.com
             </a>
-            <div className="flex space-x-3.5 items-center">
+            <div className="flex space-x-3.5">
               <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Linkedin className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
-              <a 
-                href="https://x.com/ECOBONDx" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="X (formerly Twitter)" 
-                className="text-gray-400 hover:text-[#32d96c] transition-colors flex items-center"
-              >
-                <XIcon className="w-[16px] h-[16px]" />
-              </a>
+              <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Twitter className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
               <a href="#" aria-label="YouTube" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Youtube className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
               <a href="mailto:uyotdavid@gmail.com" aria-label="Email" className="text-gray-400 hover:text-[#32d96c] transition-colors"><Mail className="w-[18px] h-[18px]" strokeWidth={1.5} /></a>
             </div>
